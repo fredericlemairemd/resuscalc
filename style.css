@@ -1,0 +1,118 @@
+body {
+  background-color: black;
+  font-family: arial;
+}
+
+.flex {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen {
+  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 3.5rem;
+}
+
+.resultFirstRow{
+  flex-basis: 33%;
+  display: flex;
+  font-style: italic;
+}
+
+.resultFirstRow {
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.resultSecondRow{
+  flex-basis: 33%;
+  display: flex;
+}
+
+.resultSecondRow {
+  justify-content: center;
+  align-items: center;
+}
+
+.resultThirdRow{
+  flex-basis: 33%;
+  display: flex;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.resultThirdRow {
+  justify-content: center;
+  align-items: center;
+}
+
+.pad {
+  flex-basis: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.rowButton {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 15%;
+}
+
+button {
+  touch-action: manipulation;
+  flex-basis: 20%;
+  font-family: arial;
+  font-size: 3rem;
+  border-radius: 300px;
+  border: none;
+}
+
+.lastRow {
+  flex-basis: 20%;
+}
+
+.zeroLastRow {
+  flex-basis: 45%;
+}
+
+.numberButton {
+  background-color: #333333;
+  color: white;
+}
+
+.operatorButton {
+  background-color: #fe9505;
+  color: white;
+
+}
+
+.otherButton {
+  background-color: #a5a5a5;
+  color: black;
+
+}
+
+.animation {
+  animation-name: flash;
+  animation-duration: 0.05s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes flash {
+  from {
+  }
+  to {
+    filter: contrast(30%);
+  }
+}
