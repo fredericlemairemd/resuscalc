@@ -93,16 +93,19 @@ for (let element of operatorButton) {
         updateScreen();
         break;
       case "=":
-      //Enlève le string "kg" pour permettre à la fonction éval de fonctionner
+        // Regarde si il faut ajouter un intervalle dans la réponse, si oui, le nombre est
+        let valeurInterval = interval(arrayCalcul);
+        console.log(valeurInterval);
+        //Enlève le string "kg" pour permettre à la fonction éval de fonctionner
         let indexKg = arrayCalcul.indexOf("kg");
         if (indexKg !== -1) {
           arrayCalcul.splice(indexKg, 1);
         }
         let equation = arrayCalcul.join("");
         let result = eval(equation);
-      //Casting de la valeur result en floating number à 1 décimale
+        //Casting de la valeur result en floating number à 1 décimale
         let roundedResult = parseFloat(result).toFixed(1);
-        lowerScreen.innerHTML = roundedResult;
+        lowerScreen.innerHTML = `${roundedResult}${valeurInterval}`;
         break;
       default:
     }
@@ -187,20 +190,55 @@ function convertToAge(weight) {
       return ("newborn");
     }
     return (`${age} mo`);
-  }
-  else if (weight <= 20) {
-    let age = Math.round((weight/2)-5);
+  } else if (weight <= 20) {
+    let age = Math.round((weight / 2) - 5);
     if (age === 0) {
       return ("1 y/o");
     }
     return (`${age} y/o`);
-  }
-  else if (weight <= 56) {
-    let age = Math.round(weight/4);
+  } else if (weight <= 56) {
+    let age = Math.round(weight / 4);
     return (`${age} y/o`);
-  }
-  else if (weight <= 300) {
+  } else if (weight <= 300) {
     return ("adult");
   }
   return ("");
+}
+
+function interval(array) {
+  // Pourqu'un interval soit générer il faut un kg multiplié par un nombre et divisé par 2 3 4 6
+  // En dehors de ces conditions, il ne faut pas généré d'interval.
+  if (isNaN(array[0])) {
+    return "";
+  }
+  // Pas besoin de spécifier la position de "kg" dans le tableau, car la fonction kg permet seulement
+  // de générer une valeur si on entre un chiffre au début sans autre opérateur
+  if (array.indexOf("kg") === -1) {
+    return "";
+  }
+  if (array.indexOf(" * ") === -1) {
+    return "";
+  }
+  //Recherche d'un signe "/" étant situé avant-dernier dans le tableau calcul
+  let index = array.length - 2;
+  if (array[index] !== " / ") {
+    return "";
+  }
+  //Retourne le dernier chiffre du tableau, est par défault une valeur singulière puisque la condition préalable est un / en avant-dernière position du tableau
+  let intervalNumber = array[array.length - 1];
+  switch (intervalNumber) {
+    case "2":
+      return " q12h";
+      break;
+    case "3":
+      return " q8h";
+      break;
+    case "4":
+      return " q6h"
+      break;
+    case "6":
+      return " q4h"
+    default:
+      return "";
+  }
 }
