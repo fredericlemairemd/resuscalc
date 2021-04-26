@@ -93,7 +93,9 @@ for (let element of operatorButton) {
         updateScreen();
         break;
       case "=":
-      //Enlève le string "kg" pour permettre à la fonction éval de fonctionner
+      // Regarde si il faut ajouter un intervalle dans la réponse, si oui, le nombre est
+        let valeurInterval = interval(arrayCalcul);
+//Enlève le string "kg" pour permettre à la fonction éval de fonctionner
         let indexKg = arrayCalcul.indexOf("kg");
         if (indexKg !== -1) {
           arrayCalcul.splice(indexKg, 1);
@@ -102,7 +104,7 @@ for (let element of operatorButton) {
         let result = eval(equation);
       //Casting de la valeur result en floating number à 1 décimale
         let roundedResult = parseFloat(result).toFixed(1);
-        lowerScreen.innerHTML = roundedResult;
+        lowerScreen.innerHTML = `${roundedResult} intervalle ${valeurInterval}`;
         break;
       default:
     }
@@ -205,6 +207,21 @@ function convertToAge(weight) {
   return ("");
 }
 
-function intervalle() {
-  
+function interval(array) {
+if (isNaN(array[0])) {
+  return 0;
+}
+if (array.indexOf("kg") === -1) {
+  return 0;
+}
+if (array.indexOf(" * ") === -1) {
+  return 0;
+}
+//Recherche d'un signe "/" étant situé avant-dernier dans le tableau calcul
+let index = array.length - 2;
+if (array[index] !== " / ") {
+  return 0;
+}
+//Retourne le dernier chiffre du tableau, est par défault une valeur singulière puisque la condition préalable est un / en avant-dernière position du tableau
+return array[array.length - 1];
 }
