@@ -69,8 +69,7 @@ body {
 }
 
 button {
-  //Permet d'enlever le délais du click (browser attend 300ms pour le double-click, ralenti l'app ++)
-  touch-action: manipulation;
+  touch-action: none;
   flex-basis: 20%;
   font-family: arial;
   font-size: 3rem;
