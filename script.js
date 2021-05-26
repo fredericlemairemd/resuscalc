@@ -87,9 +87,9 @@ for (let element of operatorButton) {
         arrayCalcul.push(" * ");
         updateScreen();
         break;
-      case "/":
+      case "÷":
         saveResult()
-        arrayCalcul.push(" / ");
+        arrayCalcul.push(" ÷ ");
         updateScreen();
         break;
       case "=":
@@ -101,6 +101,13 @@ for (let element of operatorButton) {
         if (indexKg !== -1) {
           arrayCalcul.splice(indexKg, 1);
         }
+
+        //Remplace le symbole ÷ par / pour permettre le calcul par la fonction eval
+        let indexDiv = arrayCalcul.indexOf(" ÷ ")
+        if (indexDiv !== -1) {
+          arrayCalcul.splice(indexDiv, 1, "/");
+        }
+
         let equation = arrayCalcul.join("");
         let result = eval(equation);
         //Casting de la valeur result en floating number à 1 décimale
@@ -119,10 +126,13 @@ for (let element of operatorButton) {
 // Cette fonction doit être vérifiée à chaque fois qu'un opérateur est utilisé.
 
 function saveResult() {
-  if (lowerScreen.innerHTML !== "") {
+  let lowerScreenResult = lowerScreen.innerHTML;
+  if (lowerScreenResult !== "") {
     arrayCalcul = [];
     upperScreen.innerHTML = "";
-    arrayCalcul.push(lowerScreen.innerHTML);
+    //Enlève l'intervalle pour permettre la réutilisation de la valeur
+    let splitResult = lowerScreenResult.split(" ");
+    arrayCalcul.push(splitResult[0]);
     middleScreen.innerHTML = arrayCalcul;
   }
 }
@@ -133,7 +143,7 @@ function convertToKg() {
   let actualLbs = middleScreen.innerHTML;
   let convertKg = actualLbs / 2.205;
   //Empêche l'utilisateur d'utiliser le convertToKg à n'importe quel moment
-  if (isNaN(convertKg)) {
+  if (isNaN(convertKg) || actualLbs === "") {
     clear();
     return middleScreen.innerHTML = "Erreur";
   }
@@ -153,7 +163,7 @@ function maintainKg() {
   let actualKg = middleScreen.innerHTML;
   let convertLbs = actualKg * 2.205;
   //Empêche l'utilisateur d'utiliser la fonction à n'importe quel moment
-  if (isNaN(actualKg)) {
+  if (isNaN(actualKg) || actualKg === "") {
     clear();
     return middleScreen.innerHTML = "Erreur";
   }
@@ -219,9 +229,9 @@ function interval(array) {
   if (array.indexOf(" * ") === -1) {
     return "";
   }
-  //Recherche d'un signe "/" étant situé avant-dernier dans le tableau calcul
+  //Recherche d'un signe "÷" étant situé avant-dernier dans le tableau calcul
   let index = array.length - 2;
-  if (array[index] !== " / ") {
+  if (array[index] !== " ÷ ") {
     return "";
   }
   //Retourne le dernier chiffre du tableau, est par défault une valeur singulière puisque la condition préalable est un / en avant-dernière position du tableau
