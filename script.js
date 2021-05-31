@@ -1,4 +1,3 @@
-//Test pull git par master test branch
 //Parties de l'écran affichant le calcul
 const upperScreen = document.querySelector(".resultFirstRow p");
 const middleScreen = document.querySelector(".resultSecondRow p");
