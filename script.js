@@ -65,7 +65,6 @@ function clear() {
   lowerScreen.innerHTML = "";
 }
 
-
 //Association de chaque bouton opérateur à une opération dans le tableau
 for (let element of operatorButton) {
   element.addEventListener("click", function() {
@@ -83,7 +82,7 @@ for (let element of operatorButton) {
         break;
       case "x":
         saveResult()
-        arrayCalcul.push(" * ");
+        arrayCalcul.push(" x ");
         updateScreen();
         break;
       case "÷":
@@ -94,7 +93,6 @@ for (let element of operatorButton) {
       case "=":
         // Regarde si il faut ajouter un intervalle dans la réponse, si oui, le nombre est
         let valeurInterval = interval(arrayCalcul);
-        console.log(valeurInterval);
         //Enlève le string "kg" pour permettre à la fonction éval de fonctionner
         let indexKg = arrayCalcul.indexOf("kg");
         if (indexKg !== -1) {
@@ -105,6 +103,12 @@ for (let element of operatorButton) {
         let indexDiv = arrayCalcul.indexOf(" ÷ ")
         if (indexDiv !== -1) {
           arrayCalcul.splice(indexDiv, 1, "/");
+        }
+
+        //Remplace le symbole x par * pour permettre le calcul de la fonction eval
+        let indexMultiply = arrayCalcul.indexOf(" x ")
+        if (indexMultiply !== -1) {
+          arrayCalcul.splice(indexMultiply, 1, "*");
         }
 
         let equation = arrayCalcul.join("");
@@ -225,7 +229,7 @@ function interval(array) {
   if (array.indexOf("kg") === -1) {
     return "";
   }
-  if (array.indexOf(" * ") === -1) {
+  if (array.indexOf(" x ") === -1) {
     return "";
   }
   //Recherche d'un signe "÷" étant situé avant-dernier dans le tableau calcul
@@ -251,3 +255,16 @@ function interval(array) {
       return "";
   }
 }
+
+// //Regarde la condition kg x un seul nombre pour déterminer de façon asynchrone si la dernière opération était kg x multiply
+// function checkKgMultiply(array) {
+//   if (array.indexOf("kg") === -1) {
+//     return false;
+//   }
+//
+//   let avantDernierIndex = array.length -2 ;
+//   if (array[avantDernierIndex] !== " x " {
+//     return false;
+//   }
+//   return true;
+// }
