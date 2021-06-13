@@ -91,11 +91,15 @@ for (let element of operatorButton) {
         updateScreen();
         break;
       case "=":
-        // Regarde si il faut ajouter un intervalle dans la réponse, si oui, le nombre est
+        // Regarde si il faut ajouter un intervalle dans la réponse
         let valeurInterval = interval(arrayCalcul);
-        //Enlève le string "kg" pour permettre à la fonction éval de fonctionner
+        // Trouve si "Kg" a été entré , ne calcul rien si kg suivi d'un chiffre ex: 9kg9
         let indexKg = arrayCalcul.indexOf("kg");
         if (indexKg !== -1) {
+          if (!isNaN(arrayCalcul[indexKg+1])) {
+            break;
+          }
+          //Retire kg pour permettre à la fonction éval de fonctionner
           arrayCalcul.splice(indexKg, 1);
         }
 
@@ -150,6 +154,10 @@ function convertToKg() {
     clear();
     return middleScreen.innerHTML = "Erreur";
   }
+  //Empêche user d'entrer des lbs non humain
+  if (actualLbs > 442) {
+    return
+  }
   //Calcul des valeurs à 1 décimale près pour lbs, kg, age
   let roundedKg = convertKg.toFixed(1);
   let roundedLbs = parseFloat(actualLbs).toFixed(1);
@@ -169,6 +177,10 @@ function maintainKg() {
   if (isNaN(actualKg) || actualKg === "") {
     clear();
     return middleScreen.innerHTML = "Erreur";
+  }
+  //Empêche user d'entrer des kg non humain
+  if (actualKg > 201) {
+    return
   }
   // Calcul des valeurs à 1 décimale près pour lbs,kg,age
   let roundedLbs = convertLbs.toFixed(1);
@@ -255,16 +267,3 @@ function interval(array) {
       return "";
   }
 }
-
-// //Regarde la condition kg x un seul nombre pour déterminer de façon asynchrone si la dernière opération était kg x multiply
-// function checkKgMultiply(array) {
-//   if (array.indexOf("kg") === -1) {
-//     return false;
-//   }
-//
-//   let avantDernierIndex = array.length -2 ;
-//   if (array[avantDernierIndex] !== " x " {
-//     return false;
-//   }
-//   return true;
-// }

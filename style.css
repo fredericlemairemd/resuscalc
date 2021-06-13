@@ -3,6 +3,15 @@ body {
   font-family: arial;
 }
 
+button {
+  touch-action: none;
+  flex-basis: 20%;
+  font-family: arial;
+  font-size: 3rem;
+  border-radius: 300px;
+  border: none;
+}
+
 .flex {
   position: absolute;
   top: 0;
@@ -11,6 +20,7 @@ body {
   right: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .screen {
@@ -21,36 +31,27 @@ body {
   font-size: 3.5rem;
 }
 
-.resultFirstRow{
+.resultFirstRow {
   flex-basis: 33%;
   display: flex;
   font-style: italic;
-}
-
-.resultFirstRow {
   justify-content: flex-start;
   align-items: center;
   margin-left: 10px;
 }
 
-.resultSecondRow{
+.resultSecondRow {
   flex-basis: 33%;
   display: flex;
-}
-
-.resultSecondRow {
   justify-content: center;
   align-items: center;
 }
 
-.resultThirdRow{
+.resultThirdRow {
   flex-basis: 33%;
   display: flex;
   font-size: 4rem;
   font-weight: bold;
-}
-
-.resultThirdRow {
   justify-content: center;
   align-items: center;
 }
@@ -66,15 +67,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-basis: 15%;
-}
-
-button {
-  touch-action: none;
-  flex-basis: 20%;
-  font-family: arial;
-  font-size: 3rem;
-  border-radius: 300px;
-  border: none;
 }
 
 .lastRow {
@@ -93,13 +85,11 @@ button {
 .operatorButton {
   background-color: #fe9505;
   color: white;
-
 }
 
 .otherButton {
   background-color: #a5a5a5;
   color: black;
-
 }
 
 .animation {
@@ -110,8 +100,8 @@ button {
 }
 
 @keyframes flash {
-  from {
-  }
+  from {}
+
   to {
     filter: contrast(30%);
   }
