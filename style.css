@@ -38,7 +38,6 @@ button {
   justify-content: flex-start;
   align-items: center;
   margin-left: 10px;
-  background-color: red;
 }
 
 .resultSecondRow {
@@ -47,7 +46,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: pink;
 }
 
 .resultThirdRow {
@@ -57,7 +55,6 @@ button {
   font-weight: bold;
   justify-content: center;
   align-items: center;
-  background-color: green;
 }
 
 .pad {
