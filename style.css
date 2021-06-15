@@ -32,28 +32,32 @@ button {
 }
 
 .resultFirstRow {
-  flex-basis: 33%;
+  height: 33%;
   display: flex;
   font-style: italic;
   justify-content: flex-start;
   align-items: center;
   margin-left: 10px;
+  background-color: red;
 }
 
 .resultSecondRow {
-  flex-basis: 33%;
+  height: 33%;
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: pink;
 }
 
 .resultThirdRow {
-  flex-basis: 33%;
+  height: 33%;
   display: flex;
   font-size: 4rem;
   font-weight: bold;
   justify-content: center;
   align-items: center;
+  background-color: green;
 }
 
 .pad {

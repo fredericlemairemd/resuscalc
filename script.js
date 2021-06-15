@@ -1,7 +1,7 @@
 //Parties de l'écran affichant le calcul
-const upperScreen = document.querySelector(".resultFirstRow p");
-const middleScreen = document.querySelector(".resultSecondRow p");
-const lowerScreen = document.querySelector(".resultThirdRow p");
+const upperScreen = document.querySelector(".resultFirstRow");
+const middleScreen = document.querySelector(".resultSecondRow");
+const lowerScreen = document.querySelector(".resultThirdRow");
 
 //Tableau détenant le calcul
 let arrayCalcul = [];
@@ -13,7 +13,6 @@ const clearButton = document.querySelector("#clearButton");
 const operatorButton = document.querySelectorAll(".operatorButton");
 const lbsButton = document.querySelector("#lbsButton");
 const kgButton = document.querySelector("#kgButton");
-
 
 //Animation du bouton
 function animateButton(button) {
@@ -47,7 +46,12 @@ for (let element of numberButton) {
 
 //Transforme le tableau calcul en string affichable sur l'écran calcul
 function updateScreen() {
+  let holdingMiddleScreen = middleScreen.innerHTML;
   middleScreen.innerHTML = arrayCalcul.join("");
+  //Limite le nombre de digit à l'intérieur de l'écran
+  if (middleScreen.scrollWidth > middleScreen.clientWidth || middleScreen.scrollHeight > middleScreen.clientHeight) {
+    middleScreen.innerHTML = holdingMiddleScreen;
+  }
   lowerScreen.innerHTML = "";
 }
 
@@ -96,7 +100,7 @@ for (let element of operatorButton) {
         // Trouve si "Kg" a été entré , ne calcul rien si kg suivi d'un chiffre ex: 9kg9
         let indexKg = arrayCalcul.indexOf("kg");
         if (indexKg !== -1) {
-          if (!isNaN(arrayCalcul[indexKg+1])) {
+          if (!isNaN(arrayCalcul[indexKg + 1])) {
             break;
           }
           //Retire kg pour permettre à la fonction éval de fonctionner
