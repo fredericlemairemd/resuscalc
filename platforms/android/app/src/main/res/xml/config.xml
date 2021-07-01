@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.app.resuscalc" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>ResusCalc</name>
+    <description>
+        A simple calculator
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        EZDrips team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <splash density="port-hdpi" src="resources/android/splash/drawable-port-hdpi-screen.png" />
+    <splash density="port-mdpi" src="resources/android/splash/drawable-port-mdpi-screen.png" />
+    <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
+    <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
+    <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
+    <icon density="ldpi" src="resources/android/icon/mipmap-ldpi/ic_launcher.png" />
+    <icon density="mdpi" src="resources/android/icon/mipmap-mdpi/ic_launcher.png" />
+    <icon density="hdpi" src="resources/android/icon/mipmap-hdpi/ic_launcher.png" />
+    <icon density="xhdpi" src="resources/android/icon/mipmap-xhdpi/ic_launcher.png" />
+    <icon density="xxhdpi" src="resources/android/icon/mipmap-xxhdpi/ic_launcher.png" />
+    <icon density="xxxhdpi" src="resources/android/icon/mipmap-xxxhdpi/ic_launcher.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="android-minSdkVersion" value="22" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+</widget>

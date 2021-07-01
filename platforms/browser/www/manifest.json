@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "ResusCalc",
+  "short_name": "ResusCalc",
+  "version": "io.app.resuscalc",
+  "description": "A simple calculator",
+  "author": "EZDrips team",
+  "icons": [],
+  "orientation": "portrait",
+  "start_url": "index.html"
+}

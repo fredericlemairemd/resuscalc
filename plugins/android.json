@@ -1,0 +1,21 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.app.resuscalc"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.app.resuscalc"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.app.resuscalc"
+    }
+  },
+  "dependent_plugins": {}
+}
