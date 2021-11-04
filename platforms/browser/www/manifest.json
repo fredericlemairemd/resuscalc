@@ -3,7 +3,7 @@
   "display": "standalone",
   "name": "ResusCalc",
   "short_name": "ResusCalc",
-  "version": "io.app.resuscalc",
+  "version": "io.mdapplications.resuscalc",
   "description": "A simple calculator",
   "author": "EZDrips team",
   "icons": [],

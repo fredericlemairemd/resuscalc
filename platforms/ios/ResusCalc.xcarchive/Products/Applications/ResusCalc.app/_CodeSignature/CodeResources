@@ -14,15 +14,15 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		b1k1+495ZNinR4nL0Faladiw8Aw=
+		TzBiABvbvQ+mtnY7YLUX9mfObuE=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib</key>
 		<data>
-		UHzmvkYeh0FJzRTQhfmZS+YGXpY=
+		QmA+pQKqIpVNw+h6qpT2QC3lJFE=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
 		<data>
-		UJj5Q1b1m7K2dM5SpH8ABE9iXak=
+		rsk26a6LLrHrPA7HVFiE5UwEyYc=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib</key>
 		<data>
-		ZsFNX6NNwmsQGiqJaP47fuLXzNo=
+		b9LsvpiTLA4Ymk18WyE/jVVo2AU=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
 		<data>
-		XSqROQhM/8jlE91zlhBwjB8+2y8=
+		NDjCAa94RYzBazrHcZYHF2NDXvQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		wyRfHccReu9eYtfliu+9dcQD8TY=
+		dDTdYlGMjajojlzZkhOPVbPzYqA=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		hLGAiQQPpe5HlJjRaqbmbsBuFQY=
+		/hvSRLkfgspMx6aWqC4ZouvFUfc=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		S3/Km33LcBB7RsSqIqw9v5Qejdg=
+		a3gbTiHcqCW9iqMTvTIXvur4d28=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		+8PGQFQFgQ64X8KlAbF8N4OX+Go=
+		uwvwUsGCp9Cr5YRZXVIWn/MLJhM=
 		</data>
 		<key>www/cordova-js-src/exec.js</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		eLxeIZSmXxwQlfoA90A6cbfyU54=
+		TVGDCEFxSS78ftkuyEpIqLkBIDU=
 		</data>
 		<key>www/css/fonts/poppins-bold-webfont.woff</key>
 		<data>
@@ -106,11 +106,11 @@
 		</data>
 		<key>www/css/index.css</key>
 		<data>
-		Lno1E7s7AZi9ukz8Zs1ObFTX6PE=
+		VVvTH4FhrOk+OiiGhO33BUrIz60=
 		</data>
 		<key>www/img/dark.svg</key>
 		<data>
-		w19lc1yfSzETDSMCriWe2DVOfW4=
+		7cveeVrcExefOJ3+snwiUS+ARqs=
 		</data>
 		<key>www/img/light.svg</key>
 		<data>
@@ -122,15 +122,23 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		DbJvjVgW3lDDhXk8P4uDbu4wCJw=
+		zW8ituyu+RUPBk/uXv9zFySKY+k=
 		</data>
 		<key>www/js/index.js</key>
 		<data>
-		8N+DJtQi9U0EulGHwra3aDalAhA=
+		O9KqThjvFo/BUZhdkUV8iShPFpc=
+		</data>
+		<key>www/plugins/cordova-plugin-nativeclicksound/www/nativeclick.js</key>
+		<data>
+		8KH3FS6Qz9YXf9eoXaMBzMcl6JY=
 		</data>
 		<key>www/plugins/cordova-plugin-statusbar/www/statusbar.js</key>
 		<data>
 		HziXpqJBPTHIl6qne1lRWvRuots=
+		</data>
+		<key>www/plugins/cordova-plugin-vibration/www/vibration.js</key>
+		<data>
+		60ltPTxWdSzFTKttc5RPw3oJXbw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -153,21 +161,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/i/+/Uvk1NXN7o+zObZhAR1qMwbts4gWCam76eG45vU=
+			dnM0isQ7P9OQcn8aINTWLACIUONdZaQyYGqOjoh2GjU=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R+Q1/J0hTGyNC/L7srqvZ2thB3oyu2QevYePg6GZzUs=
+			+Q27V8OUd3ab2LlE4vQKKL1YZ1+dldaP+jCiGPktiyE=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EV2JiCmFzhfvy7B3soGyibUt3ajKnp9EpkoA5vnJn64=
+			l+vjdoR/3paYpDVDV6JdYeT36y9/UlrrGojC6cWLn+c=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -181,35 +189,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			npqXHbZZAfxYloSiUEpyNBtDx6EYDhnmbKO1pIygyfU=
+			mJsoPV6ywfo+JK2cyBt35WrvGh9fBi1f/om90Cnl3i0=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BW259RJnmEJQoQfdVC8O/k4UDElwLNOMW7RsjZN60mg=
+			ITxhloGckFCeyYSWWwAGq0g3ARU+V9w96PtH2bkH2bc=
 			</data>
 		</dict>
 		<key>MainViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fz7MBjiXbicojpBY+m8L3x97aDNVT3++5iqzF69xbZw=
+			+7xk/m2aU1LmjGHVSIzZsApHmpPX1gmlFs5WXG/Z7a8=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9LThWtnTgCkYwT2k0JX0GS3nSlEfc/XGtjKJKcSKZ8c=
+			IF2dNyOnNFe3OLPPaq4QEovgY7hGZP8A+EwLi6fiLKU=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d99U3CZy4tSUI4Ub8Cb4TKXTf9QrlR/UgDgLNdCSwEA=
+			7Ts5BIQaiQy557UzgaxvGoGoUjbM6Vta/ZytJhmJbgE=
 			</data>
 		</dict>
 		<key>www/cordova-js-src/exec.js</key>
@@ -265,7 +273,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y4LCe2kKMi1ar400VihX0P7nnUdxH8ttEyisi2I3pK0=
+			4L6FMPjGraPD8GRcKZk85I6U2bDGB8/CxeHNsBrHlXg=
 			</data>
 		</dict>
 		<key>www/css/fonts/poppins-bold-webfont.woff</key>
@@ -300,14 +308,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jfp0pIrFp8vvbfyjnOAZY//s8sa0F1BJIVEHkKPcuaE=
+			Cxjnao9ZdAKvcc96ZdBXSkGrxhILzgK66Bb4eAf5FdE=
 			</data>
 		</dict>
 		<key>www/img/dark.svg</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oSHAOq2kCzhITvOwGCOjUyISge5MExYPPgvMOKDy8JQ=
+			nhtaROC+X5jxUkDY81iTpnUVp52+4RZHvl/xhdT12sE=
 			</data>
 		</dict>
 		<key>www/img/light.svg</key>
@@ -328,14 +336,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GUWvwTqszmC8Z8QzqyTUsxvWFBR5qI70R2qxlelIbt4=
+			35iSeyAbuXKtjfRnbzI6XeTzIEl+gNnWuuzQZ4obtv8=
 			</data>
 		</dict>
 		<key>www/js/index.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3XxTlbGWrU4LYUicL53O45nPkOMC3CJfbRRValbhbG4=
+			4QY6aN84PuGlCSC9bdvFWkmTeaIiq41rB+1HNC733Gg=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-nativeclicksound/www/nativeclick.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MoKpVgtPeg7lG6XoKUNMqNpJt1QE1I3oCh7WYEiWzCU=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-statusbar/www/statusbar.js</key>
@@ -343,6 +358,13 @@
 			<key>hash2</key>
 			<data>
 			rmEzcFdHfjWWorWJEWCULGXJxFhiV0+sewncVRyFpHk=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-vibration/www/vibration.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Is7J5KRaIFiGAZ/LmVN+Vzlx+Ng8ljz+iyz2At8lm5I=
 			</data>
 		</dict>
 	</dict>

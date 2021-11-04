@@ -19,6 +19,14 @@
             {
               "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"NativeClick\"><param name=\"ios-package\" value=\"NativeClick\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -28,6 +36,12 @@
   "installed_plugins": {
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "io.app.resuscalc"
+    },
+    "cordova-plugin-nativeclicksound": {
+      "PACKAGE_NAME": "io.mdapplications.resuscalc"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "io.mdapplications.resuscalc"
     }
   },
   "dependent_plugins": {},
@@ -39,9 +53,27 @@
       "clobbers": [
         "window.StatusBar"
       ]
+    },
+    {
+      "id": "cordova-plugin-nativeclicksound.nativeclick",
+      "file": "plugins/cordova-plugin-nativeclicksound/www/nativeclick.js",
+      "pluginId": "cordova-plugin-nativeclicksound",
+      "clobbers": [
+        "nativeclick"
+      ]
+    },
+    {
+      "id": "cordova-plugin-vibration.notification",
+      "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+      "pluginId": "cordova-plugin-vibration",
+      "merges": [
+        "navigator"
+      ]
     }
   ],
   "plugin_metadata": {
-    "cordova-plugin-statusbar": "2.4.3"
+    "cordova-plugin-statusbar": "2.4.3",
+    "cordova-plugin-nativeclicksound": "0.0.4",
+    "cordova-plugin-vibration": "3.1.1"
   }
 }

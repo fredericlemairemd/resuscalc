@@ -17,10 +17,12 @@
  * under the License.
  */
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0.5); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-    -webkit-tap-highlight-color: transparent; /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 
+}
+html, body {
+  overflow-x: hidden;
+}
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -96,6 +98,9 @@ body {
     transition: all .3s;
   }
 
+  .op {
+    color: var(--font-op);
+  }
   
   .switch-container {
     width: 100px;
@@ -138,41 +143,32 @@ body {
     -webkit-transition: .4s;
     transition: .4s;
     background: white url('../img/light.svg');
-  
-    background-repeat: no-repeat;
-    background-position: center;
+   
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: var(--color-secondary);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px var(--color-secondary);
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
     transform: translateX(26px);
-    background: white url('../img/dark.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  
-  .calc {
-   
-  
+    background: #262a30 url('../img/dark.svg');
   
   }
+  
+
   
   .screen {
     min-height: 250px;
-    padding: 30px;
+    padding: 10px 30px;
   }
   
   .screen-row {
+    /* overflow-x: auto; */
     height: 33%;
     color: var(--color-btn);
     font-family: 'poppinsbold';
@@ -182,15 +178,17 @@ body {
   
   
   .resultFirstRow {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
   }
   
   .resultSecondRow {
     font-size: 2.5rem;
+    white-space: nowrap;
   }
   
   .resultThirdRow {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
+    white-space: nowrap;
   }
   
   .pad {
@@ -206,7 +204,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-auto-rows: auto;
-    gap: 1em;
+    gap: 0.5em;
     border:0;
     padding: 20px;
   }
@@ -241,7 +239,5 @@ body {
   .numberButton {
     color: var(--color-btn)
   }
-  
-  
   
   

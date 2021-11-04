@@ -38,6 +38,8 @@ function onDeviceReady() {
     const operatorButton = document.querySelectorAll(".btn-op");
     const lbsButton = document.querySelector("#lbsButton");
     const kgButton = document.querySelector("#kgButton");
+    // constante click sound
+    const clickyClasses = ['btn']; 
 
 //Animation du bouton
 function animateButton(button) {
@@ -46,6 +48,15 @@ function animateButton(button) {
       button.classList.remove("animation");
     }, 200);
   }
+
+  // touch sound native
+    nativeclick.watch(clickyClasses);
+  // vibrate touch
+//   const touch = document.querySelector(".btn");
+//     touch.addEventListener('click', function(){
+//         navigator.vibrate(3000);
+//     })
+    
   
   //Associé le click du bouton à une animation
   for (let element of allButtons) {
@@ -67,9 +78,9 @@ function animateButton(button) {
         let holdingMiddleScreen = middleScreen.innerHTML;
         middleScreen.innerHTML = arrayCalcul.join("");
         //Limite le nombre de digit à l'intérieur de l'écran
-        if (middleScreen.scrollWidth > middleScreen.clientWidth || middleScreen.scrollHeight > middleScreen.clientHeight) {
-            middleScreen.innerHTML = holdingMiddleScreen;
-        }
+        // if (middleScreen.scrollWidth > middleScreen.clientWidth || middleScreen.scrollHeight > middleScreen.clientHeight) {
+        //     middleScreen.innerHTML = holdingMiddleScreen;
+        // }
         lowerScreen.innerHTML = "";
     }
 
@@ -173,8 +184,10 @@ function animateButton(button) {
         let convertKg = actualLbs / 2.205;
         //Empêche l'utilisateur d'utiliser le convertToKg à n'importe quel moment
         if (isNaN(convertKg) || actualLbs === "") {
+            navigator.vibrate(3000);
             clear();
             return middleScreen.innerHTML = "Erreur";
+          
         }
         //Empêche user d'entrer des lbs non humain
         if (actualLbs > 442) {
@@ -197,6 +210,7 @@ function animateButton(button) {
         let convertLbs = actualKg * 2.205;
         //Empêche l'utilisateur d'utiliser la fonction à n'importe quel moment
         if (isNaN(actualKg) || actualKg === "") {
+            navigator.vibrate(3000);
             clear();
             return middleScreen.innerHTML = "Erreur";
         }
@@ -289,5 +303,10 @@ function animateButton(button) {
                 return "";
         }
     }
+
+    window.setInterval(function() {
+        const elem = document.querySelector('.resultSecondRow');
+        elem.scrollLeft = elem.scrollWidth;
+      }, 20);
 
 }

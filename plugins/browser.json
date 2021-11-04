@@ -15,6 +15,12 @@
     },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "io.app.resuscalc"
+    },
+    "cordova-plugin-nativeclicksound": {
+      "PACKAGE_NAME": "io.mdapplications.resuscalc"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "io.mdapplications.resuscalc"
     }
   },
   "dependent_plugins": {}
